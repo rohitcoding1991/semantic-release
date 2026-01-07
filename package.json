@@ -1,0 +1,43 @@
+{
+  "name": "go-semantic-release-action",
+  "version": "0.0.0-development",
+  "main": "src/index.js",
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohitcoding1991/semantic-release.git"
+  },
+  
+  "scripts": {
+    "test": "eslint src/** && tsc --noEmit ./src/index.ts",
+    "fix": "eslint --fix src/**",
+    "build": "bun build ./src/index.js --target=node --outfile=dist/index.mjs",
+    "prepare": "husky"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/tool-cache": "^2.0.1",
+    "semver": "^7.3.8"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.1.0",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "@types/node": "^20.11.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "eslint": "^8.33.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^9.0.11",
+    "semantic-release": "^24.0.0",
+    "typescript": "^5.3.3"
+  }
+}
